@@ -12,6 +12,7 @@ app.use(
   })
 );
 app.use('/api/goals',require('./routes/goalRoutes'));
+app.use('/api/users',require('./routes/userRoutes'));
 app.use(errorHandler);
 const port = process.env.PORT || 5000;
 app.listen(port,()=>console.log(`Server listening on port ${port}`));
