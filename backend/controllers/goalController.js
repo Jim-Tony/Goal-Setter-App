@@ -5,7 +5,7 @@ const asyncHandler = require('express-async-handler');
 // @route GET /api/goals
 // @access Private
 const getGoal = asyncHandler(async (req,res)=>{
-    console.log(req.user);
+    // console.log(req.user);
     const goals = await Goal.find({user:req.user._id});
     res.status(200).json(goals);
 })
@@ -23,7 +23,7 @@ const setGoal = asyncHandler(async (req,res)=>{
         text:req.body.text,
         user:req.user.id
     })
-    console.log(goal);
+    // console.log(goal);
     res.status(200).json(goal)
 })
 
