@@ -8,10 +8,10 @@ import Dashboard from './pages/Dashboard';
 import Register from './pages/Register';
 function App() {
   return (
+    <>
     <Router>
       <div className='container'>
         <Header/>
-        <ToastContainer position="top-right"/>
         <Routes>
           <Route path='/' element={<Dashboard/>}/>
           <Route path='/login' element={<Login/>}/>
@@ -19,6 +19,8 @@ function App() {
         </Routes>
       </div>
     </Router>
+    <ToastContainer/>
+    </>
   )
 }
 
