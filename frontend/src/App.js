@@ -11,6 +11,7 @@ function App() {
     <Router>
       <div className='container'>
         <Header/>
+        <ToastContainer position="top-right"/>
         <Routes>
           <Route path='/' element={<Dashboard/>}/>
           <Route path='/login' element={<Login/>}/>
